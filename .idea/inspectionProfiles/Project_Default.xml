@@ -1,0 +1,19 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pygame.sprite.Sprite.draw" />
+          <option value="src.env.model.simulation.config.Config.road_count_x" />
+          <option value="src.env.model.simulation.config.Config.road_count_y" />
+          <option value="src.env.model.simulation.config.Config.idm_car_count" />
+          <option value="src.env.model.simulation.config.Config.pedestrians" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

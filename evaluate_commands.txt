@@ -1,0 +1,86 @@
+Hier sind ein paar abgespeicherte Befehle, die alle irgendwann mal ausgeführt wurden. Es kann sein, dass teilweise Befehle nicht mehr funktionieren. Für aktuelle Informationen die README lesen!
+
+FINAL_EXPERIMENT_1
+python main.py evaluation FINAL_EXPERIMENT_1 RL_AGENT --num_workers 4 --num_episodes 1000 --env_fps 24 --agent DQN
+
+python main.py evaluation FINAL_EXPERIMENT_1 ACCELERATE_AGENT --num_workers 4 --num_episodes 1000 --env_fps 24 --agent ACCELERATE
+
+python main.py evaluation FINAL_EXPERIMENT_1 IDM_AGENT --num_workers 4 --num_episodes 1000 --env_fps 24 --agent IDM --no-env_shield_include_layer_3
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_4_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 4.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_6_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 6.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_8_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 8.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_10_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 10.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_12_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 12.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_14_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 14.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 TTC_AGENT_16_NEW --num_workers 4 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 16.0
+
+python main.py evaluation FINAL_EXPERIMENT_1 SIMULATION_AGENT --num_workers 4 --num_episodes 1000 --env_fps 24 --agent Simulation
+
+python main.py evaluation FINAL_EXPERIMENT_1_NO_SHIELD RL_AGENT_NO_SHIELD --model_names "check_model_24883200_steps" --num_workers 24 --num_episodes 1000 --env_fps 24 --agent DQN --no-env_shield_include_layer_3 --no-env_shield_include_layer_7
+
+python main.py evaluation FINAL_EXPERIMENT_1_REDO RL_AGENT --num_workers 8 --num_episodes 1000 --env_fps 24 --agent DQN
+
+python main.py evaluation FINAL_EXPERIMENT_1 performance_check --model_names "check_model_23915520_steps,check_model_24053760_steps,check_model_24192000_steps,check_model_24330240_steps,check_model_24468480_steps,check_model_24606720_steps,check_model_24744960_steps,check_model_24883200_steps,model" --num_workers 24 --num_episodes 100 --env_fps 4
+
+python main.py evaluation FINAL_EXPERIMENT_1_NO_SHIELD performance_check --model_names "check_model_23915520_steps,check_model_24053760_steps,check_model_24192000_steps,check_model_24330240_steps,check_model_24468480_steps,check_model_24606720_steps,check_model_24744960_steps,check_model_24883200_steps,model" --num_workers 24 --num_episodes 100 --env_fps 4 --agent DQN --no-env_shield_include_layer_3 --no-env_shield_include_layer_7
+
+python main.py evaluation FINAL_EXPERIMENT_1 ACCELERATE_AGENT_NEW --num_workers 8 --num_episodes 1000 --env_fps 24 --agent ACCELERATE --model_names "model"
+
+FINAL_EXPERIMENT_2
+
+python main.py evaluation FINAL_EXPERIMENT_2 performance_check --model_names "check_model_23086080_steps,check_model_23224320_steps,check_model_23362560_steps,check_model_23500800_steps,check_model_23639040_steps,check_model_23777280_steps,check_model_23915520_steps,check_model_24053760_steps,check_model_24192000_steps,check_model_24330240_steps,model" --num_workers 24 --num_episodes 100 --env_fps 4
+
+
+python main.py evaluation FINAL_EXPERIMENT_2 RL_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent DQN
+
+python main.py evaluation FINAL_EXPERIMENT_2 RL_AGENT --num_workers 24 --num_episodes 1000 --env_fps 24 --agent DQN --model_names "check_model_23777280_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_2 ACCELERATE_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent ACCELERATE
+
+python main.py evaluation FINAL_EXPERIMENT_2 IDM_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent IDM --no-env_shield_include_layer_3
+
+python main.py evaluation FINAL_EXPERIMENT_1 RL_AGENT_OBSTACLES_NEW --num_workers 24 --num_episodes 1000 --env_fps 24 --agent DQN --env_min_obstacle_percent 25 --env_max_obstacle_percent 100 --env_agent_waiting_time_tresh 20 --env_agent_waiting_v_tresh 2.5
+
+python main.py evaluation FINAL_EXPERIMENT_2 TTC_AGENT_12 --num_workers 6 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 12.0
+
+python main.py evaluation FINAL_EXPERIMENT_2 TTC_AGENT_12_NEW --num_workers 8 --num_episodes 1000 --env_fps 24 --agent TTC --env_agent_ttc_thresh 12.0
+
+python main.py evaluation FINAL_EXPERIMENT_2 TTC_CREEP_AGENT_12 --num_workers 6 --num_episodes 1000 --env_fps 24 --agent TTC_CREEP --env_agent_ttc_thresh 12.0
+
+python main.py evaluation FINAL_EXPERIMENT_2 TTC_CREEP_AGENT_12_NEW --num_workers 8 --num_episodes 1000 --env_fps 24 --agent TTC_CREEP --env_agent_ttc_thresh 12.0
+
+python main.py evaluation FINAL_EXPERIMENT_2_HIGHER_EXPLORATION RL_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent DQN
+
+python main.py evaluation FINAL_EXPERIMENT_2 ACCELERATE_AGENT_NEW --num_workers 8 --num_episodes 1000 --env_fps 24 --agent ACCELERATE --model_names "check_model_23777280_steps"
+
+BEST MODEL
+python main.py evaluation FINAL_EXPERIMENT_2 RL_AGENT --num_workers 24 --num_episodes 1000 --env_fps 24 --agent DQN --model_names "check_model_23362560_steps"
+
+
+FINAL EXPERIMENT MIN MAP
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP performance_check --model_names "check_model_23777280_steps,check_model_23915520_steps,check_model_24053760_steps,check_model_24192000_steps,check_model_24330240_steps,check_model_24468480_steps,check_model_24606720_steps,check_model_24744960_steps,check_model_24883200_steps,model" --num_workers 24 --num_episodes 100 --env_fps 4
+
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP TTC_CREEP_AGENT_12 --num_workers 6 --num_episodes 1000 --env_fps 24 --agent TTC_CREEP --env_agent_ttc_thresh 12.0 --model_names "check_model_24192000_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP IDM_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent IDM --no-env_shield_include_layer_3 --model_names "check_model_24192000_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP ACCELERATE_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent ACCELERATE --model_names "check_model_24192000_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP RL_AGENT --num_workers 6 --num_episodes 1000 --env_fps 24 --agent DQN --model_names "check_model_24192000_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP ACCELERATE_AGENT_NEW --num_workers 8 --num_episodes 1000 --env_fps 24 --agent ACCELERATE --model_names "check_model_24192000_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP RL_AGENT --num_workers 12 --num_episodes 1000 --env_fps 24 --agent DQN --model_names "FINAL_EXPERIMENT_2\model\check_model_23362560_steps"
+
+python main.py evaluation FINAL_EXPERIMENT_2 RL_AGENT --num_workers 24 --num_episodes 1000 --env_fps 24 --agent DQN --model_names "FINAL_EXPERIMENT_MIN_MAP\model\model"
+
+BEST MODEL
+python main.py evaluation FINAL_EXPERIMENT_MIN_MAP RL_AGENT --num_workers 12 --num_episodes 1000 --env_fps 24 --agent DQN --model_names "model"
+

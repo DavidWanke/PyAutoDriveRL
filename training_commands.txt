@@ -1,0 +1,54 @@
+Hier sind ein paar abgespeicherte Befehle, die alle irgendwann mal ausgeführt wurden. Es kann sein, dass teilweise Befehle nicht mehr funktionieren. Für aktuelle Informationen die README lesen!
+
+python main.py training FINAL_EXPERIMENT_1_NO_SHIELD --num_workers=24 --seed=1 --total_steps=25000000 --no-env_shield_include_layer_7 --no-env_shield_include_layer_3
+
+python main.py training FINAL_EXPERIMENT_1_REDO --num_workers=24 --seed=1 --total_steps=25000000 --env_agent_waiting_time_tresh 120 --env_agent_waiting_v_tresh 5.0
+
+python main.py training FINAL_EXPERIMENT_2 --num_workers=24 --seed=1 --total_steps=25000000 --env_min_obstacle_percent 25 --env_max_obstacle_percent 100
+
+python main.py training FINAL_EXPERIMENT_2_HIGHER_EXPLORATION --num_workers=24 --seed=1 --total_steps=25000000 --env_min_obstacle_percent 25 --env_max_obstacle_percent 100 --exploration_fraction 0.25
+
+python main.py training FINAL_EXPERIMENT_MIN_MAP --num_workers=24 --seed=1 --total_steps=25000000 --env_use_minimal_map
+
+python main.py evaluation priority_shield_v4 24_fps_2 --num_workers 12 --num_episodes 1000 --env_fps 24
+
+
+
+python main.py evaluation priority_shield_v7 test --num_workers 6 --num_episodes 6 --env_fps 4 --render
+
+
+FINAL EXPERIMENT 1
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_1\evaluation\ACCELERATE_AGENT,FINAL_EXPERIMENT_1\evaluation\IDM_AGENT,FINAL_EXPERIMENT_1\evaluation\RL_AGENT,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\RL_AGENT_NO_SHIELD_m.check_model_24883200_steps_e.1000_fps.24,FINAL_EXPERIMENT_1\evaluation\SIMULATION_AGENT_NEW,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_12_NEW" --mode "SAVE"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_4,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_6,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_8,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_10,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_12,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_14,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_16"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_4_NEW,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_6_NEW,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_8_NEW,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_10_NEW,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_12_NEW,FINAL_EXPERIMENT_1\evaluation\TTC_AGENT_14_NEW" --mode "SAVE"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_23915520_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24053760_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24192000_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24330240_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24468480_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24606720_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24744960_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24883200_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.model_e.100" --mode "SHOW"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24468480_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24606720_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24744960_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.check_model_24883200_steps_e.100,FINAL_EXPERIMENT_1\evaluation\performance_check_m.model_e.100" --mode "SAVE"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_23915520_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24053760_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24192000_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24330240_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24468480_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24606720_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24744960_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.check_model_24883200_steps_e.100,FINAL_EXPERIMENT_1_NO_SHIELD\evaluation\performance_check_m.model_e.100"
+
+FINAL EXPERIMENT 2
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_2\evaluation\ACCELERATE_AGENT,FINAL_EXPERIMENT_2\evaluation\IDM_AGENT,FINAL_EXPERIMENT_2\evaluation\TTC_AGENT_12_NEW,FINAL_EXPERIMENT_2\evaluation\TTC_CREEP_AGENT_12_NEW,FINAL_EXPERIMENT_2\evaluation\RL_AGENT,FINAL_EXPERIMENT_2_HIGHER_EXPLORATION\evaluation\RL_AGENT,FINAL_EXPERIMENT_1\evaluation\RL_AGENT_OBSTACLES_NEW"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_2\evaluation\ACCELERATE_AGENT,FINAL_EXPERIMENT_2\evaluation\IDM_AGENT,FINAL_EXPERIMENT_2\evaluation\RL_AGENT_m.check_model_23362560_steps_e.1000_fps.24,FINAL_EXPERIMENT_1\evaluation\RL_AGENT_OBSTACLES_NEW,FINAL_EXPERIMENT_2\evaluation\TTC_CREEP_AGENT_12_NEW,FINAL_EXPERIMENT_2\evaluation\TTC_AGENT_12_NEW" --mode SHOW
+
+python main.py plotting experiment --paths "FINAL_EXPERIMENT_1,FINAL_EXPERIMENT_2"
+
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23086080_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23224320_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23362560_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23500800_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23639040_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23777280_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_23915520_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_24053760_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_24192000_steps_e.100_fps.4,FINAL_EXPERIMENT_2\evaluation\performance_check_m.check_model_24330240_steps_e.100_fps.4" --mode SHOW
+
+FINAL EXPERIMENT MIN MAP
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_23777280_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_23915520_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24053760_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24192000_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24330240_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24468480_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24606720_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24744960_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.check_model_24883200_steps_e.100_fps.4,FINAL_EXPERIMENT_MIN_MAP\evaluation\performance_check_m.model_e.100_fps.4" --mode "SHOW"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_MIN_MAP\evaluation\ACCELERATE_AGENT_m.check_model_24192000_steps_e.1000_fps.24,FINAL_EXPERIMENT_MIN_MAP\evaluation\IDM_AGENT_m.check_model_24192000_steps_e.1000_fps.24,FINAL_EXPERIMENT_MIN_MAP\evaluation\RL_AGENT_m.check_model_24192000_steps_e.1000_fps.24,FINAL_EXPERIMENT_MIN_MAP\evaluation\TTC_CREEP_AGENT_12_m.check_model_24192000_steps_e.1000_fps.24" --mode "SHOW"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_MIN_MAP\evaluation\ACCELERATE_AGENT,FINAL_EXPERIMENT_MIN_MAP\evaluation\IDM_AGENT,FINAL_EXPERIMENT_MIN_MAP\evaluation\RL_AGENT_m.model_e.1000_fps.24,FINAL_EXPERIMENT_MIN_MAP\evaluation\RL_AGENT_m.FINAL_EXPERIMENT_2.model.check_model_23362560_steps_e.1000_fps.24,FINAL_EXPERIMENT_MIN_MAP\evaluation\TTC_CREEP_AGENT_12" --mode "SHOW"
+
+python main.py plotting evaluation --paths "FINAL_EXPERIMENT_2\evaluation\ACCELERATE_AGENT,FINAL_EXPERIMENT_2\evaluation\IDM_AGENT,FINAL_EXPERIMENT_2\evaluation\RL_AGENT_m.FINAL_EXPERIMENT_MIN_MAP.model.model_e.1000_fps.24,FINAL_EXPERIMENT_2\evaluation\RL_AGENT_m.check_model_23362560_steps_e.1000_fps.24,FINAL_EXPERIMENT_1\evaluation\RL_AGENT_OBSTACLES_NEW,FINAL_EXPERIMENT_2\evaluation\TTC_CREEP_AGENT_12_NEW" --mode SHOW
+
+
+
+python main.py plotting experiment --paths "FINAL_EXPERIMENT_MIN_MAP,FINAL_EXPERIMENT_2"

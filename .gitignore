@@ -1,0 +1,11 @@
+*.avi
+saved_images/graphs/evaluation/*
+!saved_images/graphs/evaluation/.gitkeep
+
+saved_images/graphs/training/*
+!saved_images/graphs/training/.gitkeep
+
+saved_images/maps/*
+!saved_images/maps/.gitkeep
+
+*_steps.zip
